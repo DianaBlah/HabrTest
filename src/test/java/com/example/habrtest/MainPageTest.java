@@ -34,7 +34,7 @@ public class MainPageTest {
     }
 
     @Test
-    public void BeAnAuthorTest() {
+    public void WriteAPublicationTest() {
 
         WebElement userIcon = driver.findElement(By.cssSelector("svg[data-test-id='menu-toggle-guest']"));
         userIcon.click();
@@ -46,5 +46,17 @@ public class MainPageTest {
 
     }
 
+    @Test
+    public void NewAuthorTest() {
+
+        WebElement userIcon = driver.findElement(By.cssSelector("svg[data-test-id='menu-toggle-guest']"));
+        userIcon.click();
+
+        WebElement beAnAuthor = driver.findElement(By.xpath("//a[contains(text(), 'Как стать автором')][@class=\"tm-user-menu__menu-link\"]"));
+        beAnAuthor.click();
+
+        assertTrue(driver.findElement(By.xpath("//*[@class='tm-block__title tm-block__title']")).isDisplayed(), "блок Новые авторы не найден");
+
+    }
 
 }
