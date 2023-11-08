@@ -39,10 +39,10 @@ public class MainPageTest {
         WebElement userIcon = driver.findElement(By.cssSelector("svg[data-test-id='menu-toggle-guest']"));
         userIcon.click();
 
-        WebElement beAnAuthor = driver.findElement(By.xpath("//a[contains(text(), 'Как стать автором')][@class=\"tm-user-menu__menu-link\"]"));
+        WebElement beAnAuthor = driver.findElement(By.xpath("//a[contains(text(), 'Как стать автором')][@class='tm-user-menu__menu-link']"));
         beAnAuthor.click();
 
-        assertTrue(driver.findElement(By.xpath("//a[1][contains(text(), 'Написать публикацию')][@class=\"button\"]")).isDisplayed(), "Первая кнопка Написать публикацию не найдена");
+        assertTrue(driver.findElement(By.xpath("//a[1][contains(text(), 'Написать публикацию')][@class='button']")).isDisplayed(), "Первая кнопка Написать публикацию не найдена");
 
     }
 
@@ -52,7 +52,7 @@ public class MainPageTest {
         WebElement userIcon = driver.findElement(By.cssSelector("svg[data-test-id='menu-toggle-guest']"));
         userIcon.click();
 
-        WebElement beAnAuthor = driver.findElement(By.xpath("//a[contains(text(), 'Как стать автором')][@class=\"tm-user-menu__menu-link\"]"));
+        WebElement beAnAuthor = driver.findElement(By.xpath("//a[contains(text(), 'Как стать автором')][@class='tm-user-menu__menu-link']"));
         beAnAuthor.click();
 
         assertTrue(driver.findElement(By.xpath("//*[@class='tm-block__title tm-block__title']")).isDisplayed(), "блок Новые авторы не найден");
